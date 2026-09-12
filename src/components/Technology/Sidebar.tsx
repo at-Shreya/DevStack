@@ -12,31 +12,19 @@ const Sidebar = ({
   onRemoveAll
 }: SidebarProps) => {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+    <div className="flex min-h-[300px] flex-col rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
 
       {/* Heading */}
-      <div className="flex items-center justify-between">
+      <div>
+        <h2 className="text-xl font-bold text-gray-900">
+          Your Stack
+        </h2>
 
-        <div>
-          <h2 className="text-xl font-bold text-gray-900">
-            Your Stack
-          </h2>
-
-          <p className="mt-1 text-sm text-gray-500">
-            {stack.length} Technology Selected
-          </p>
-        </div>
-
-        {stack.length > 0 && (
-          <button
-            onClick={onRemoveAll}
-            className="text-sm font-medium text-red-500 hover:text-red-600"
-          >
-            Remove All
-          </button>
-        )}
-
+        <p className="mt-1 text-sm text-gray-500">
+          {stack.length} Technology Selected
+        </p>
       </div>
+
 
       {/* Empty Message */}
       {stack.length === 0 && (
@@ -50,6 +38,7 @@ const Sidebar = ({
           </p>
         </div>
       )}
+
 
       {/* Stack Items */}
       <div className="mt-5 flex flex-col gap-3">
@@ -87,6 +76,17 @@ const Sidebar = ({
         ))}
 
       </div>
+
+
+      {/* Remove All */}
+      {stack.length > 0 && (
+        <button
+          onClick={onRemoveAll}
+          className="mt-auto w-full rounded-lg border border-gray-300 bg-white px-3 py-2 font-semibold text-pink-600 shadow-md transition hover:bg-gray-50"
+        >
+          Remove All
+        </button>
+      )}
 
     </div>
   );

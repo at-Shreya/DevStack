@@ -2,9 +2,9 @@ import bannerStack from "../assets/banner-stack.png";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-pink-50">
+    <section id= "home" className="scroll-mt-20 bg-gradient-to-br from-purple-50 via-white to-pink-50">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-10 px-6 py-20 lg:flex-row">
-        
+
         {/* Left Side */}
         <div className="max-w-2xl">
           <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
@@ -21,13 +21,13 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-8 flex gap-4">
-            <button className="brand-gradient rounded-lg px-6 py-3 font-semibold text-white shadow-md hover:opacity-90">
+            <a href= "#technologies" className="brand-gradient rounded-lg px-6 py-3 font-semibold text-white shadow-md hover:opacity-90">
               Explore Technologies
-            </button>
+            </a>
 
-            <button className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-700 hover:bg-gray-50">
+            <a href= "#footer" className="rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-700 hover:bg-gray-50">
               Learn More
-            </button>
+            </a>
           </div>
         </div>
 

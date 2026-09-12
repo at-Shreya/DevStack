@@ -74,7 +74,7 @@ const MainTech = () => {
   };
 
   return (
-    <section className="bg-gray-50 px-6 py-20">
+    <section id="technologies" className="bg-gray-50 px-6 py-20">
       <div className="mx-auto max-w-6xl">
 
         {/* Section Heading */}
@@ -91,14 +91,24 @@ const MainTech = () => {
 
         {/* Loading */}
         {loading ? (
-          <p className="mt-12 text-center text-gray-500">
-            Loading technologies...
-          </p>
+            <div className="flex flex-col items-center justify-center py-20">
+
+    <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-pink-500"></div>
+
+    <p className="mt-4 text-lg font-semibold text-gray-700">
+      Loading Technologies...
+    </p>
+
+    <p className="mt-1 text-sm text-gray-500">
+      Please wait a moment
+    </p>
+
+  </div>
         ) : (
 
           /* Content */
           <div className="mt-12 grid gap-8 lg:grid-cols-4">
-            
+
             {/* Technology Cards  */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
               {technologies.map((technology) => (

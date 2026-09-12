@@ -12,10 +12,10 @@ const Navbar = () => {
 
         {/* Mobile Navbar */}
         <div className="relative flex h-16 items-center justify-between lg:hidden">
-          
+
           {/* Hamburger */}
           <button onClick={() => setMenuOpen(!menuOpen)}>
-            <img src={hamburger} alt="Menu" className="h-6 w-6" />
+            <img src={hamburger} alt="Menu" className="h-6 w-6 transition hover:opacity-70" />
           </button>
 
           {/* Logo */}
@@ -26,12 +26,14 @@ const Navbar = () => {
           />
 
           {/* Buttons */}
-          <div className="ml-auto flex items-center gap-2">
-            <button className="text-sm text-gray-600">Sign In</button>
+          <div className="ml-auto flex items-center gap-2" >
+            <button className="px-3 py-2 text-sm font-semibold text-gray-700 transition hover:bg-gray-50">
+    Sign In
+  </button>
 
-            <button className="rounded-full bg-pink-500 px-4 py-2 text-sm font-semibold text-white">
-              Sign Up
-            </button>
+            <button className="brand-gradient rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-md transition hover:opacity-90">
+    Sign Up
+  </button>
           </div>
         </div>
 
@@ -39,11 +41,11 @@ const Navbar = () => {
         {menuOpen && (
           <div className="border-t py-4 lg:hidden">
             <div className="flex flex-col gap-4">
-              <a href="#" className="text-pink-500">
+              <a href="#home" className="text-pink-500">
                 Home
               </a>
 
-              <a href="#" className="text-gray-600">
+              <a href="#technologies" className="text-gray-600">
                 Technologies
               </a>
 
@@ -51,11 +53,11 @@ const Navbar = () => {
                 Projects
               </a>
 
-              <a href="#" className="text-gray-600">
+              <a href="#footer" className="text-gray-600">
                 About
               </a>
 
-              <a href="#" className="text-gray-600">
+              <a href="#footer" className="text-gray-600">
                 Contact
               </a>
             </div>
@@ -69,11 +71,11 @@ const Navbar = () => {
 
           {/* Menu */}
           <div className="flex items-center gap-8">
-            <a href="#" className="text-sm text-pink-500">
+            <a href="#home" className="text-sm text-pink-500">
               Home
             </a>
 
-            <a href="#" className="text-sm text-gray-600 hover:text-pink-500">
+            <a href="#technologies" className="text-sm text-gray-600 hover:text-pink-500">
               Technologies
             </a>
 
@@ -81,11 +83,11 @@ const Navbar = () => {
               Projects
             </a>
 
-            <a href="#" className="text-sm text-gray-600 hover:text-pink-500">
+            <a href="#footer" className="text-sm text-gray-600 hover:text-pink-500">
               About
             </a>
 
-            <a href="#" className="text-sm text-gray-600 hover:text-pink-500">
+            <a href="#footer" className="text-sm text-gray-600 hover:text-pink-500">
               Contact
             </a>
           </div>
@@ -96,7 +98,7 @@ const Navbar = () => {
               Sign In
             </button>
 
-            <button className="brand-gradient rounded-lg px-5 py-2 font-semibold text-white">
+            <button className="brand-gradient rounded-lg px-5 py-2 font-semibold text-white shadow-md transition hover:opacity-90">
               Sign Up
             </button>
           </div>

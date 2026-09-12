@@ -17,7 +17,7 @@ const TechnologyCard = ({
       {/* Top */}
 
       <div className="flex items-start justify-between">
-        
+
         <img
           src={technology.icon}
           alt={technology.name}

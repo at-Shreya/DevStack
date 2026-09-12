@@ -1,7 +1,7 @@
 import logoText from "../assets/logo-text.png";
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer id="footer" className="border-t border-gray-200 bg-white">
       
       {/* Main Footer */}
       <div className="mx-auto max-w-6xl px-6 py-12">
@@ -56,11 +56,11 @@ const Footer = () => {
             </h3>
 
             <div className="mt-4 flex flex-col gap-3 text-sm text-gray-500">
-              <a href="#" className="hover:text-pink-500">
+              <a href="#home" className="hover:text-pink-500">
                 Home
               </a>
 
-              <a href="#" className="hover:text-pink-500">
+              <a href="#technologies" className="hover:text-pink-500">
                 Technologies
               </a>
 
