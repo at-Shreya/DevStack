@@ -7,8 +7,9 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b bg-white">
+
       <div className="mx-auto max-w-6xl px-6">
-        
+
         {/* Mobile Navbar */}
         <div className="relative flex h-16 items-center justify-between lg:hidden">
           
@@ -95,7 +96,7 @@ const Navbar = () => {
               Sign In
             </button>
 
-            <button className="rounded-full bg-pink-500 px-5 py-2 text-sm font-semibold text-white hover:bg-pink-600">
+            <button className="brand-gradient rounded-lg px-5 py-2 font-semibold text-white">
               Sign Up
             </button>
           </div>

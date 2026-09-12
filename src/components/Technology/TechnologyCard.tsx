@@ -9,14 +9,15 @@ interface TechnologyCardProps {
 const TechnologyCard = ({
   technology,
   onAdd,
-  isAdded
+  isAdded,
 }: TechnologyCardProps) => {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
 
       {/* Top */}
-      <div className="flex items-start justify-between">
 
+      <div className="flex items-start justify-between">
+        
         <img
           src={technology.icon}
           alt={technology.name}
@@ -48,25 +49,21 @@ const TechnologyCard = ({
 
       {/* Difficulty + Rating */}
       <div className="mt-5 flex items-center justify-between">
-
-        <span className="text-sm text-gray-500">
-          {technology.difficulty}
-        </span>
+        <span className="text-sm text-gray-500">{technology.difficulty}</span>
 
         <span className="text-sm font-semibold text-gray-700">
           ⭐ {technology.rating}
         </span>
-
       </div>
 
       {/* Add Button */}
       <button
         onClick={() => onAdd(technology)}
         disabled={isAdded}
-        className={`mt-5 w-full rounded-lg py-2.5 text-sm font-semibold ${
+        className={`mt-4 w-full rounded-lg py-2.5 text-sm font-medium ${
           isAdded
             ? "cursor-not-allowed bg-gray-200 text-gray-500"
-            : "bg-pink-500 text-white hover:bg-pink-600"
+            : "brand-gradient text-white hover:opacity-90"
         }`}
       >
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}

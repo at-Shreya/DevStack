@@ -76,15 +76,16 @@ const MainTech = () => {
   return (
     <section className="bg-gray-50 px-6 py-20">
       <div className="mx-auto max-w-6xl">
+
         {/* Section Heading */}
-        <div className="text-center">
+        <div>
           <h2 className="text-4xl font-bold text-gray-900">
-            Explore the Technologies
+            Explore the{" "}
+            <span className="brand-gradient-text">Technologies</span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Discover popular technologies and build your perfect development
-            stack for your next project.
+          <p className="mt-3 max-w-2xl text-gray-600">
+            Pick one technology per category to build your ideal stack.
           </p>
         </div>
 
@@ -94,8 +95,10 @@ const MainTech = () => {
             Loading technologies...
           </p>
         ) : (
+
           /* Content */
           <div className="mt-12 grid gap-8 lg:grid-cols-4">
+            
             {/* Technology Cards  */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-3">
               {technologies.map((technology) => (
