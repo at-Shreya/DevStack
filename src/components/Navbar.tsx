@@ -7,33 +7,33 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b bg-white">
-
       <div className="mx-auto max-w-6xl px-6">
-
         {/* Mobile Navbar */}
-        <div className="relative flex h-16 items-center justify-between lg:hidden">
-
+        <div className="grid grid-cols-3 items-center px-4 py-3 lg:hidden">
           {/* Hamburger */}
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            <img src={hamburger} alt="Menu" className="h-6 w-6 transition hover:opacity-70" />
-          </button>
+          <div className="justify-self-start">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="rounded-lg p-2 transition hover:bg-gray-100"
+            >
+              <img src={hamburger} alt="Menu" className="h-6 w-6" />
+            </button>
+          </div>
 
           {/* Logo */}
-          <img
-            src={logo}
-            alt="Dev Stack"
-            className="absolute left-1/2 h-8 w-auto -translate-x-1/2"
-          />
+          <div className="justify-self-center">
+            <img src={logo} alt="Dev Stack" className="h-8 w-auto" />
+          </div>
 
           {/* Buttons */}
-          <div className="ml-auto flex items-center gap-2" >
-            <button className="px-3 py-2 text-sm font-semibold text-gray-700 transition hover:bg-gray-50">
-    Sign In
-  </button>
+          <div className="flex justify-self-end gap-1 sm:gap-2">
+            <button className="px-2 py-1.5 text-xs font-semibold sm:px-3 sm:py-2 sm:text-sm">
+              Sign In
+            </button>
 
-            <button className="brand-gradient rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-md transition hover:opacity-90">
-    Sign Up
-  </button>
+            <button className="brand-gradient rounded-lg px-2 py-1.5 text-xs font-semibold text-white shadow-md transition hover:opacity-90 sm:px-3 sm:py-2 sm:text-sm">
+              Sign Up
+            </button>
           </div>
         </div>
 
@@ -75,7 +75,10 @@ const Navbar = () => {
               Home
             </a>
 
-            <a href="#technologies" className="text-sm text-gray-600 hover:text-pink-500">
+            <a
+              href="#technologies"
+              className="text-sm text-gray-600 hover:text-pink-500"
+            >
               Technologies
             </a>
 
@@ -83,11 +86,17 @@ const Navbar = () => {
               Projects
             </a>
 
-            <a href="#footer" className="text-sm text-gray-600 hover:text-pink-500">
+            <a
+              href="#footer"
+              className="text-sm text-gray-600 hover:text-pink-500"
+            >
               About
             </a>
 
-            <a href="#footer" className="text-sm text-gray-600 hover:text-pink-500">
+            <a
+              href="#footer"
+              className="text-sm text-gray-600 hover:text-pink-500"
+            >
               Contact
             </a>
           </div>
